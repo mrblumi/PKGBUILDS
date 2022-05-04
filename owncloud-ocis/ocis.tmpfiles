@@ -1,0 +1,2 @@
+h /var/lib/ocis - - - - +C
+d /var/lib/ocis/data 0700 ocis ocis

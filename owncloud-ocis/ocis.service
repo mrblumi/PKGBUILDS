@@ -1,0 +1,12 @@
+[Unit]
+Description=Owncloud OCIS server
+
+[Service]
+Type=simple
+User=ocis
+Group=ocis
+ExecStart=/usr/bin/ocis server
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

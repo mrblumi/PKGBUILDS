@@ -5,6 +5,7 @@ Description=Owncloud OCIS server
 Type=simple
 User=ocis
 Group=ocis
+EnvironmentFile=/etc/ocis/ocis.env
 ExecStart=/usr/bin/ocis server
 Restart=always
 

@@ -1,7 +1,7 @@
 pkgname=ocis
 pkgver=2.0.0
-_pkgver=2.0.0-beta.3
-pkgrel=0.3
+_pkgver=2.0.0-beta.5
+pkgrel=0.5
 pkgdesc='owncloud OCIS - a new generation cloud platform'
 arch=('x86_64')
 url='https://owncloud.com'
@@ -15,7 +15,7 @@ source=(
   $pkgname.tmpfiles
 )
 sha256sums=(
-  'e4cf26c67726c6628c412bdeeb4eab77d51a90d86c6336dba87bf1adce505345'
+  '62702a1836f5bb16cfa2cb4bcf8d34eb97f70352c2daa72571323432a856b576' 
   '28a3737c7fdcaf76abd48d12d3a3334a75ac7a4a5924a550d7e437fc41a49e99'
   'c10e64f63cdb4a3e0027fbb742ee289fbd64757dee966dd726e45b1d8f1dc9dc'
   'eaf8a9dfbe1660da0a88efc9788175c1b896d3577c549b68179dac7689b520f5'
@@ -26,7 +26,7 @@ package() {
   install -Dm 755 ocis-${_pkgver}-linux-amd64 "$pkgdir/usr/bin/$pkgname"
   install -Dm 644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 
-  install -Dm 644 $pkgname.env	    "$pkgdir/etc/ocis/$pkgname.env"
+  install -Dm 644 $pkgname.env	    "$pkgdir/etc/ocis/$pkgname-example.env"
   install -Dm 644 $pkgname.service  "$pkgdir/usr/lib/systemd/system/$pkgname.service"
   install -Dm 644 $pkgname.sysusers "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
   install -Dm 644 $pkgname.tmpfiles "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
